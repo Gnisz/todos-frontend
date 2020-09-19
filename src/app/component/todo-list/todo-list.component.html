@@ -1,0 +1,16 @@
+
+<h3> Todo List</h3>
+<button [routerLink]="['/', 'todo-add']" type="button" class="btn btn-success mb-3">Add Todo</button>
+<div *ngFor="let todo of todos">
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{todo.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{todo.userName}}</h6>
+      <a [routerLink]="['/', 'todos', todo.id]" class="card-link float-right ml-3">Open</a>
+      <a  [routerLink]="['/', 'todo-edit', todo.id]" class="card-link float-right">Edit</a>
+    </div>
+  </div>
+
+</div>
+
